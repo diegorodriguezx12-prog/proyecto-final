@@ -22,7 +22,3 @@ do
     Console.WriteLine("4. Reiniciar estadísticas");
     Console.WriteLine("5. Salir");
     Console.Write("\nSeleccione una opción: ");
-
-    string entrada = Console.ReadLine();
-    opcion = int.Parse(entrada);
-} while (true);
