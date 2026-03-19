@@ -22,3 +22,38 @@ do
     Console.WriteLine("4. Reiniciar estadísticas");
     Console.WriteLine("5. Salir");
     Console.Write("Seleccione una opción: ");
+
+    if (!int.TryParse(Console.ReadLine(), out opcion))
+    {
+        opcion = 0;
+    }
+
+    switch (opcion)
+    {
+        case 1:
+            EvaluarContenido();
+            break;
+        case 2:
+            MostrarReglas();
+            break;
+        case 3:
+            MostrarEstadisticas();
+            break;
+        case 4:
+            ReiniciarEstadisticas();
+            break;
+        case 5:
+            FinalizarPrograma();
+            break;
+        default:
+            Console.WriteLine("Error: Ingrese un número válido (1-5).");
+            break;
+    }
+
+    if (opcion != 5)
+    {
+        Console.WriteLine("Presione cualquier tecla para continuar...");
+        Console.ReadKey();
+    }
+
+} while (opcion != 5);
