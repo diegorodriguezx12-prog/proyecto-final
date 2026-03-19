@@ -21,4 +21,4 @@ do
     Console.WriteLine("3. Mostrar estadísticas de la sesión");
     Console.WriteLine("4. Reiniciar estadísticas");
     Console.WriteLine("5. Salir");
-    Console.Write("\nSeleccione una opción: ");
+    Console.Write("Seleccione una opción: ");
