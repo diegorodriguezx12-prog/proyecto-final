@@ -27,32 +27,57 @@ do
     {
         opcion = 0;
 
-    switch (opcion)
-    {
-        case 1:
-            EvaluarContenido();
-            break;
-        case 2:
-            MostrarReglas();
-            break;
-        case 3:
-            MostrarEstadisticas();
-            break;
-        case 4:
-            ReiniciarEstadisticas();
-            break;
-        case 5:
-            FinalizarPrograma();
-            break;
-        default:
-            Console.WriteLine("Error: Ingrese un número válido (1-5).");
-            break;
-    }
+        switch (opcion)
+        {
+            case 1:
+                EvaluarContenido();
+                break;
+            case 2:
+                MostrarReglas();
+                break;
+            case 3:
+                MostrarEstadisticas();
+                break;
+            case 4:
+                ReiniciarEstadisticas();
+                break;
+            case 5:
+                FinalizarPrograma();
+                break;
+            default:
+                Console.WriteLine("Error: Ingrese un número válido (1-5).");
+                break;
+        }
 
-    if (opcion != 5)
-    {
-        Console.WriteLine("\nPresione cualquier tecla para continuar...");
-        Console.ReadKey();
-    }
+        if (opcion != 5)
+        {
+            Console.WriteLine("\nPresione cualquier tecla para continuar...");
+            Console.ReadKey();
+        }
 
-} while (opcion != 5);
+    } while (opcion != 5) ;
+
+    void EvaluarContenido()
+    {
+        Console.WriteLine("--- INGRESO DE DATOS ---");
+
+        int tipo = 0;
+        while (tipo < 1 || tipo > 4)
+        {
+            Console.Write("Tipo (1. Película, 2. Serie, 3. Documental, 4. En vivo): ");
+            int.TryParse(Console.ReadLine(), out tipo);
+        }
+
+        int duracion = -1;
+        while (duracion < 0)
+        {
+            Console.Write("Duración en minutos: ");
+            int.TryParse(Console.ReadLine(), out duracion);
+        }
+
+        int clasificacion = 0;
+        while (clasificacion < 1 || clasificacion > 3)
+        {
+            Console.Write("Clasificación (1. Todo público, 2. +13, 3. +18): ");
+            int.TryParse(Console.ReadLine(), out clasificacion);
+        }
