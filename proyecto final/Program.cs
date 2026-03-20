@@ -97,3 +97,14 @@ do
 
         bool pasoTecnica = true;
         string razonRechazo = "";
+
+        if (clasificacion == 2 && (hora < 6 || hora > 22))
+        {
+            pasoTecnica = false;
+            razonRechazo = "Contenido +13 fuera de horario (6-22h).";
+        }
+        else if (clasificacion == 3 && (hora > 5 && hora < 22))
+        {
+            pasoTecnica = false;
+            razonRechazo = "Contenido +18 fuera de horario (22-5h).";
+        }
