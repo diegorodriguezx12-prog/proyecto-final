@@ -51,7 +51,7 @@ do
 
         if (opcion != 5)
         {
-            Console.WriteLine("\nPresione cualquier tecla para continuar...");
+            Console.WriteLine("Presione cualquier tecla para continuar...");
             Console.ReadKey();
         }
 
