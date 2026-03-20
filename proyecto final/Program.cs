@@ -81,3 +81,19 @@ do
             Console.Write("Clasificación (1. Todo público, 2. +13, 3. +18): ");
             int.TryParse(Console.ReadLine(), out clasificacion);
         }
+        int hora = -1;
+        while (hora < 0 || hora > 23)
+        {
+            Console.Write("Hora programada (0-23): ");
+            int.TryParse(Console.ReadLine(), out hora);
+        }
+
+        int produccion = 0;
+        while (produccion < 1 || produccion > 3)
+        {
+            Console.Write("Nivel de producción (1. Bajo, 2. Medio, 3. Alto): ");
+            int.TryParse(Console.ReadLine(), out produccion);
+        }
+
+        bool pasoTecnica = true;
+        string razonRechazo = "";
