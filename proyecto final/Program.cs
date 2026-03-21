@@ -120,3 +120,22 @@ do
             pasoTecnica = false;
             razonRechazo = "Producción baja no permitida para contenido +18.";
         }
+        int impacto = 0;
+        if (pasoTecnica)
+        {
+            if (produccion == 3 || duracion > 120 || (hora >= 20 && hora <= 23))
+            {
+                impacto = 3;
+                impactoAltoCount++;
+            }
+            else if (produccion == 2 || (duracion >= 60 && duracion <= 120))
+            {
+                impacto = 2;
+                impactoMedioCount++;
+            }
+            else
+            {
+                impacto = 1;
+                impactoBajoCount++;
+            }
+        }
