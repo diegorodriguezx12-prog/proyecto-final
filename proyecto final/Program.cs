@@ -108,3 +108,15 @@ do
             pasoTecnica = false;
             razonRechazo = "Contenido +18 fuera de horario (22-5h).";
         }
+        if (pasoTecnica)
+        {
+            if (tipo == 1 && (duracion < 60 || duracion > 180)) { pasoTecnica = false; razonRechazo = "Película fuera de rango."; }
+            else if (tipo == 2 && (duracion < 20 || duracion > 90)) { pasoTecnica = false; razonRechazo = "Serie fuera de rango."; }
+            else if (tipo == 3 && (duracion < 30 || duracion > 120)) { pasoTecnica = false; razonRechazo = "Documental fuera de rango."; }
+            else if (tipo == 4 && (duracion < 30 || duracion > 240)) { pasoTecnica = false; razonRechazo = "Evento fuera de rango."; }
+        }
+        if (pasoTecnica && produccion == 1 && clasificacion == 3)
+        {
+            pasoTecnica = false;
+            razonRechazo = "Producción baja no permitida para contenido +18.";
+        }
