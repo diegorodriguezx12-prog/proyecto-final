@@ -139,3 +139,24 @@ do
                 impactoBajoCount++;
             }
         }
+        totalEvaluados++;
+        Console.WriteLine("\n--- RESULTADO DE EVALUACIÓN ---");
+        if (!pasoTecnica)
+        {
+            Console.WriteLine("DECISIÓN: RECHAZAR");
+            Console.WriteLine("RAZÓN: " + razonRechazo);
+            rechazados++;
+        }
+        else if (impacto == 3)
+        {
+            Console.WriteLine("DECISIÓN: ENVIAR A REVISIÓN");
+            Console.WriteLine("RAZÓN: El impacto es Alto.");
+            enRevision++;
+        }
+        else
+        {
+            Console.WriteLine("DECISIÓN: PUBLICAR");
+            Console.WriteLine("RAZÓN: Cumple reglas técnicas e impacto adecuado.");
+            publicados++;
+        }
+    }
