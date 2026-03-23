@@ -140,7 +140,7 @@ do
             }
         }
         totalEvaluados++;
-        Console.WriteLine("\n--- RESULTADO DE EVALUACIÓN ---");
+        Console.WriteLine("--- RESULTADO DE EVALUACIÓN ---");
         if (!pasoTecnica)
         {
             Console.WriteLine("DECISIÓN: RECHAZAR");
