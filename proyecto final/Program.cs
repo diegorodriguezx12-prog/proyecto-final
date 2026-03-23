@@ -21,7 +21,7 @@ do
     Console.WriteLine("3. Mostrar estadísticas de la sesión");
     Console.WriteLine("4. Reiniciar estadísticas");
     Console.WriteLine("5. Salir");
-    Console.Write("\nSeleccione una opción: ");
+    Console.Write("Seleccione una opción: ");
 
     if (!int.TryParse(Console.ReadLine(), out opcion))
     {
@@ -160,3 +160,12 @@ do
             publicados++;
         }
     }
+    void MostrarReglas()
+    {
+        Console.WriteLine("--- RESUMEN DE REGLAS ---");
+        for (int i = 1; i <= 1; i++)
+        {
+            Console.WriteLine("- Películas: 60-180 min | Series: 20-90 min");
+            Console.WriteLine("- +13: Solo 6:00 a 22:00 | +18: Solo 22:00 a 5:00");
+            Console.WriteLine("- Producción mínima Media para +18");
+        }
