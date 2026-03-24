@@ -169,3 +169,5 @@ do
             Console.WriteLine("- +13: Solo 6:00 a 22:00 | +18: Solo 22:00 a 5:00");
             Console.WriteLine("- Producción mínima Media para +18");
         }
+    }
+
